@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wingstop $500 Gift Card</title>
+  <title>Unlock Burger King × Hello Kitty Rewards — Claim Your $100 Gift Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -12,226 +13,401 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #e8f5ec;
-      color: #1a1a1a;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #fff5f8 0%, #ffeef5 40%, #fff9fb 100%);
+      color: #2d2d2d;
       min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 40px 16px;
+      overflow-x: hidden;
+      position: relative;
     }
 
-    .card {
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
-      max-width: 420px;
-      background: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-      padding: 36px 28px 32px;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 182, 193, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(255, 105, 180, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(255, 192, 203, 0.08) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .sparkle {
+      position: absolute;
+      font-size: 18px;
+      opacity: 0.5;
+      animation: float 6s ease-in-out infinite;
+      z-index: 1;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(8deg); }
+    }
+
+    .top-banner {
+      background: linear-gradient(90deg, #c41e3a, #e63950, #c41e3a);
+      color: white;
       text-align: center;
+      padding: 12px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      position: relative;
+      z-index: 10;
+      box-shadow: 0 2px 12px rgba(196, 30, 58, 0.3);
     }
 
-    /* Wingstop logo – white fill + green outline */
-    .logo {
-      font-size: 28px;
-      font-weight: 800;
-      color: #ffffff;
-      -webkit-text-stroke: 1.8px #00843D;
-      letter-spacing: 1px;
-      margin-bottom: 4px;
+    .top-banner .timer {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
 
-    .subtitle {
-      font-size: 16px;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    .amount {
-      font-size: 72px;
-      font-weight: 800;
-      color: #111;
-      line-height: 1;
-      margin-bottom: 8px;
-      letter-spacing: -2px;
-    }
-
-    .credit-text {
-      font-size: 15px;
-      color: #6b7280;
-      margin-bottom: 28px;
-    }
-
-    .badges {
-      display: flex;
-      background: #f5f5f0;
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 36px;
-    }
-
-    .badge {
-      flex: 1;
-      padding: 14px 8px;
-      text-align: center;
-      border-right: 1px solid #e5e5e0;
-    }
-
-    .badge:last-child {
-      border-right: none;
-    }
-
-    .badge-value {
-      font-size: 15px;
-      font-weight: 700;
-      color: #111;
-      display: block;
-    }
-
-    .badge-label {
+    .top-banner .sub {
       font-size: 11px;
-      color: #6b7280;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 1.5px;
+      opacity: 0.9;
       margin-top: 2px;
+      text-transform: uppercase;
     }
 
-    .steps {
-      text-align: left;
-      margin-bottom: 32px;
+    .container {
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 28px 20px 60px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .logo-area {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .collab-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      padding: 10px 22px;
+      border-radius: 50px;
+      box-shadow: 0 4px 20px rgba(255, 105, 180, 0.2);
+      border: 2px solid #ffb6c1;
+    }
+
+    .collab-text {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 15px;
+      color: #c41e3a;
+      letter-spacing: 0.5px;
+    }
+
+    .collab-text span {
+      color: #ff69b4;
+    }
+
+    .gift-card {
+      background: linear-gradient(145deg, #fff0f5 0%, #ffe4ec 50%, #ffd6e7 100%);
+      border-radius: 20px;
+      padding: 28px 24px;
+      text-align: center;
+      box-shadow: 
+        0 10px 30px rgba(255, 105, 180, 0.18),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+      border: 2px solid #ffb6c1;
+      margin-bottom: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gift-card::before {
+      content: '♡';
+      position: absolute;
+      top: -10px;
+      right: 15px;
+      font-size: 80px;
+      color: rgba(255, 105, 180, 0.08);
+      transform: rotate(15deg);
+    }
+
+    .gift-amount {
+      font-size: 42px;
+      font-weight: 800;
+      color: #c41e3a;
+      letter-spacing: -1px;
+      margin-bottom: 6px;
+      text-shadow: 0 2px 0 rgba(255,255,255,0.6);
+    }
+
+    .gift-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #ff69b4;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+
+    .gift-tagline {
+      font-size: 15px;
+      line-height: 1.55;
+      color: #5a3a4a;
+      font-weight: 500;
+    }
+
+    .gift-tagline strong {
+      color: #c41e3a;
+    }
+
+    .cute-icons {
+      margin-top: 14px;
+      font-size: 22px;
+      letter-spacing: 6px;
+    }
+
+    .headline {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .headline h1 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: #2d2d2d;
+      line-height: 1.25;
+    }
+
+    .headline h1 span {
+      color: #c41e3a;
+    }
+
+    .headline .subhead {
+      font-size: 14px;
+      color: #ff69b4;
+      margin-top: 6px;
+      font-weight: 600;
+    }
+
+    .steps-box {
+      background: white;
+      border-radius: 18px;
+      padding: 24px 22px;
+      margin: 24px 0 28px;
+      box-shadow: 0 8px 28px rgba(255, 105, 180, 0.12);
+      border: 1.5px solid #ffd0e0;
     }
 
     .step {
       display: flex;
-      gap: 14px;
-      margin-bottom: 22px;
       align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 16px;
     }
 
-    .step-num {
-      width: 32px;
-      height: 32px;
-      background: #00843D;
-      color: white;
+    .step:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #ffe4ec, #ffd0e0);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 15px;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    .step-content h3 {
       font-size: 16px;
-      font-weight: 700;
-      color: #111;
-      margin-bottom: 2px;
+      flex-shrink: 0;
+      border: 1.5px solid #ffb6c1;
     }
 
-    .step-content p {
-      font-size: 14px;
-      color: #6b7280;
-      line-height: 1.4;
+    .step-text {
+      font-size: 14.5px;
+      line-height: 1.45;
+      color: #3a3a3a;
+      font-weight: 500;
+      padding-top: 7px;
     }
 
-    .step-content h3.underline {
-      text-decoration: underline;
-      text-underline-offset: 3px;
+    .step-text strong {
+      color: #c41e3a;
     }
 
-    .claim-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 56px;
-      background: #00843D;
+    .cta-wrapper {
+      text-align: center;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff69b4 0%, #ff1493 50%, #c41e3a 100%);
       color: white;
+      font-family: 'Nunito', sans-serif;
       font-size: 18px;
-      font-weight: 700;
+      font-weight: 800;
+      padding: 18px 48px;
+      border-radius: 50px;
       text-decoration: none;
-      border-radius: 999px;
-      transition: background 0.2s, transform 0.15s;
-      margin-bottom: 18px;
-      gap: 6px;
+      box-shadow: 
+        0 8px 24px rgba(255, 20, 147, 0.4),
+        0 2px 0 rgba(255,255,255,0.25) inset;
+      transition: all 0.25s ease;
+      letter-spacing: 0.5px;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
     }
 
-    .claim-btn:hover {
-      background: #006b32;
-      transform: translateY(-1px);
+    .cta-button:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 
+        0 12px 32px rgba(255, 20, 147, 0.5),
+        0 2px 0 rgba(255,255,255,0.25) inset;
     }
 
-    .disclaimer {
-      font-size: 13px;
-      color: #6b7280;
-      line-height: 1.4;
+    .cta-button:active {
+      transform: translateY(0) scale(0.98);
     }
 
-    @media (max-width: 400px) {
-      .amount {
-        font-size: 60px;
+    .cta-note {
+      margin-top: 14px;
+      font-size: 12.5px;
+      color: #888;
+      font-weight: 500;
+    }
+
+    .cta-note span {
+      color: #ff69b4;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 11px;
+      color: #aaa;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 480px) {
+      .gift-amount {
+        font-size: 36px;
       }
-      .logo {
-        font-size: 24px;
+      .headline h1 {
+        font-size: 22px;
       }
-      .card {
-        padding: 28px 20px 24px;
+      .cta-button {
+        padding: 16px 36px;
+        font-size: 16px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="logo">WINGSTOP</div>
-    <div class="subtitle">Gift Card</div>
 
-    <div class="amount">$500</div>
-    <div class="credit-text">Credit to spend at Wingstop</div>
+  <div class="sparkle" style="top: 120px; left: 8%;">✨</div>
+  <div class="sparkle" style="top: 280px; right: 6%; animation-delay: 1.5s;">♡</div>
+  <div class="sparkle" style="top: 480px; left: 5%; animation-delay: 3s;">⭐</div>
+  <div class="sparkle" style="top: 650px; right: 10%; animation-delay: 2s;">✨</div>
 
-    <div class="badges">
-      <div class="badge">
-        <span class="badge-value">3–5</span>
-        <span class="badge-label">Deals</span>
-      </div>
-      <div class="badge">
-        <span class="badge-value">Free</span>
-        <span class="badge-label">To Sign Up</span>
-      </div>
-      <div class="badge">
-        <span class="badge-value">Email</span>
-        <span class="badge-label">Delivery</span>
-      </div>
+  <div class="top-banner">
+    <div class="timer">
+      🕐 You have <span id="countdown">4:59</span> minutes left to unlock your reward
     </div>
-
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-content">
-          <h3>Tap the button below</h3>
-          <p>Start your $500 reward offer</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-content">
-          <h3>Enter your email</h3>
-          <p>Just a valid address to get started</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-content">
-          <h3 class="underline">Complete 3-5 recommended deals</h3>
-          <p>Trials & offers to unlock the full $500</p>
-        </div>
-      </div>
-    </div>
-
-    <a href="https://linkthem.net/aff_c?offer_id=1541&aff_id=145283" class="claim-btn">Claim My $500 →</a>
-
-    <p class="disclaimer">Deal completion required. Some deals may need a purchase.</p>
+    <div class="sub">— Complete the steps before access expires —</div>
   </div>
+
+  <div class="container">
+
+    <div class="logo-area">
+      <div class="collab-badge">
+        <span style="font-size: 28px;">👑</span>
+        <div class="collab-text">
+          BURGER KING <span>× HELLO KITTY</span>
+        </div>
+        <span style="font-size: 28px;">🎀</span>
+      </div>
+    </div>
+
+    <div class="gift-card">
+      <div class="gift-label">Limited Edition Reward</div>
+      <div class="gift-amount">$100 Gift Card</div>
+      <div class="gift-tagline">
+        Celebrate the <strong>Burger King × Hello Kitty</strong> collab<br>
+        with exclusive King Jr. Meals, mystery toys<br>
+        & a special golden Hello Kitty surprise!
+      </div>
+      <div class="cute-icons">🐱 👑 🍔 🎀 ✨</div>
+    </div>
+
+    <div class="headline">
+      <h1>Unlock <span>BK × Hello Kitty</span> Rewards 🎁</h1>
+      <div class="subhead">✨ Here’s how to claim your $100 gift card ✨</div>
+    </div>
+
+    <div class="steps-box">
+      <div class="step">
+        <div class="step-icon">📋</div>
+        <div class="step-text">Click the <strong>“Claim Now”</strong> button below</div>
+      </div>
+      <div class="step">
+        <div class="step-icon">✉️</div>
+        <div class="step-text">Enter your email and basic details</div>
+      </div>
+      <div class="step">
+        <div class="step-icon">📝</div>
+        <div class="step-text">Answer our quick fan experience survey</div>
+      </div>
+      <div class="step">
+        <div class="step-icon">🎁</div>
+        <div class="step-text">Complete 4–5 featured partner offers</div>
+      </div>
+      <div class="step">
+        <div class="step-icon">🔓</div>
+        <div class="step-text">Unlock your <strong>$100 Burger King Gift Card</strong></div>
+      </div>
+    </div>
+
+    <div class="cta-wrapper">
+      <a href="https://linkthem.net/aff_c?offer_id=3710&aff_id=145283" class="cta-button" target="_blank" rel="noopener noreferrer">
+        ⭐ CLAIM NOW ⭐
+      </a>
+      <div class="cta-note">
+        (Instant approval • <span>No purchase required</span>)
+      </div>
+    </div>
+
+    <div class="footer">
+      This is a limited-time promotional offer related to the<br>
+      Burger King × Hello Kitty & Friends collaboration.<br>
+      Offer available while supplies last. Terms may apply.
+    </div>
+
+  </div>
+
+  <script>
+    let totalSeconds = 4 * 60 + 59;
+
+    function updateCountdown() {
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+      document.getElementById('countdown').textContent = 
+        `${minutes}:${seconds.toString().padStart(2, '0')}`;
+      
+      if (totalSeconds > 0) {
+        totalSeconds--;
+      } else {
+        totalSeconds = 0;
+      }
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
 </body>
 </html>

@@ -1,361 +1,492 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unlock Burger King × Hello Kitty Rewards — Claim Your $100 Gift Card</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Check eligibility and complete the required sponsored deals to qualify for $500 in 7 Brew savings.">
+  <meta name="theme-color" content="#a7293f">
+  <title>Claim Your $500 in 7 Brew Savings | 7B Reward</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    *,::before,::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --red:#a7293f;
+      --red-dark:#831b2e;
+      --ink:#181818;
+      --muted:#6e6e6e;
+      --line:#e4e4e4;
+      --green:#00b67a;
     }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(180deg, #fff5f8 0%, #ffeef5 40%, #fff9fb 100%);
-      color: #2d2d2d;
-      min-height: 100vh;
-      overflow-x: hidden;
-      position: relative;
+    body{
+      min-height:100vh;
+      padding:22px 15px 56px;
+      overflow-x:hidden;
+      background:radial-gradient(circle at 12% 5%,rgba(167,41,63,.05),transparent 28%),
+                 linear-gradient(180deg,#fff 0%,#fafafa 100%);
+      color:var(--ink);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     }
-
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: 
-        radial-gradient(circle at 10% 20%, rgba(255, 182, 193, 0.15) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(255, 105, 180, 0.1) 0%, transparent 40%),
-        radial-gradient(circle at 50% 50%, rgba(255, 192, 203, 0.08) 0%, transparent 60%);
-      pointer-events: none;
-      z-index: 0;
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:radial-gradient(circle at 88% 74%,rgba(0,0,0,.025),transparent 30%);
     }
-
-    .sparkle {
-      position: absolute;
-      font-size: 18px;
-      opacity: 0.5;
-      animation: float 6s ease-in-out infinite;
-      z-index: 1;
+    .page{
+      position:relative;
+      z-index:1;
+      display:flex;
+      max-width:452px;
+      margin:0 auto;
+      flex-direction:column;
+      gap:13px;
     }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-12px) rotate(8deg); }
+    .online{
+      display:flex;
+      width:fit-content;
+      margin:0 auto;
+      align-items:center;
+      gap:9px;
+      padding:9px 21px;
+      border:1px solid #e5e5e5;
+      border-radius:999px;
+      background:#fff;
+      box-shadow:0 7px 20px rgba(0,0,0,.07);
+      color:#333;
+      font-size:14px;
+      font-weight:500;
     }
-
-    .container {
-      max-width: 520px;
-      margin: 0 auto;
-      padding: 28px 20px 60px;
-      position: relative;
-      z-index: 5;
+    .online-dot{
+      width:9px;
+      height:9px;
+      flex-shrink:0;
+      border-radius:50%;
+      background:var(--red);
+      box-shadow:0 0 0 3px rgba(167,41,63,.12),0 0 12px rgba(167,41,63,.24);
     }
-
-    .logo-area {
-      text-align: center;
-      margin-bottom: 22px;
+    .offer-card{
+      position:relative;
+      overflow:hidden;
+      padding:25px 21px;
+      border:1px solid #e3e3e3;
+      border-radius:24px;
+      background:#fff;
+      box-shadow:0 16px 40px rgba(0,0,0,.09);
     }
-
-    .collab-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: white;
-      padding: 10px 22px;
-      border-radius: 50px;
-      box-shadow: 0 4px 20px rgba(255, 105, 180, 0.2);
-      border: 2px solid #ffb6c1;
+    .offer-card::before{
+      content:"";
+      position:absolute;
+      top:-54px;
+      right:-54px;
+      width:130px;
+      height:130px;
+      border:1px solid rgba(167,41,63,.07);
+      border-radius:50%;
+      box-shadow:0 0 0 22px rgba(167,41,63,.025),0 0 0 44px rgba(167,41,63,.015);
     }
-
-    .collab-text {
-      font-family: 'Nunito', sans-serif;
-      font-weight: 800;
-      font-size: 15px;
-      color: #c41e3a;
-      letter-spacing: 0.5px;
+    .brand{
+      position:relative;
+      z-index:1;
+      display:flex;
+      margin-bottom:17px;
+      padding-bottom:17px;
+      flex-direction:column;
+      align-items:center;
+      border-bottom:1px solid #e6e6e6;
+      text-align:center;
     }
-
-    .collab-text span {
-      color: #ff69b4;
+    .brand-logo{
+      display:block;
+      width:112px;
+      height:112px;
+      margin-bottom:9px;
+      object-fit:contain;
+      filter:drop-shadow(0 8px 12px rgba(34,17,20,.11));
     }
-
-    .gift-card {
-      background: linear-gradient(145deg, #fff0f5 0%, #ffe4ec 50%, #ffd6e7 100%);
-      border-radius: 20px;
-      padding: 28px 24px;
-      text-align: center;
-      box-shadow: 
-        0 10px 30px rgba(255, 105, 180, 0.18),
-        inset 0 1px 0 rgba(255,255,255,0.8);
-      border: 2px solid #ffb6c1;
-      margin-bottom: 28px;
-      position: relative;
-      overflow: hidden;
+    .brand-copy{
+      color:#454545;
+      font-size:15px;
+      font-weight:400;
+      line-height:1.5;
     }
-
-    .gift-card::before {
-      content: '♡';
-      position: absolute;
-      top: -10px;
-      right: 15px;
-      font-size: 80px;
-      color: rgba(255, 105, 180, 0.08);
-      transform: rotate(15deg);
+    .brand-copy strong{color:var(--red-dark)}
+    .steps-box{
+      position:relative;
+      z-index:1;
+      overflow:hidden;
+      margin-bottom:20px;
+      border:1px solid #dcdcdc;
+      border-radius:13px;
+      background:#fff;
     }
-
-    .gift-amount {
-      font-size: 42px;
-      font-weight: 800;
-      color: #c41e3a;
-      letter-spacing: -1px;
-      margin-bottom: 6px;
-      text-shadow: 0 2px 0 rgba(255,255,255,0.6);
+    .steps-title{
+      min-height:44px;
+      padding:12px 17px;
+      border-bottom:1px solid #e4e4e4;
+      background:#f7f7f7;
+      color:#222;
+      font-size:14.5px;
+      font-weight:700;
     }
-
-    .gift-label {
-      font-size: 13px;
-      font-weight: 600;
-      color: #ff69b4;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 16px;
+    .steps{list-style:none}
+    .steps li{
+      display:flex;
+      align-items:flex-start;
+      gap:13px;
+      padding:13px 17px;
+      border-bottom:1px solid #f1f1f1;
+      color:#181818;
+      font-size:14.5px;
+      line-height:1.45;
     }
-
-    .gift-tagline {
-      font-size: 15px;
-      line-height: 1.55;
-      color: #5a3a4a;
-      font-weight: 500;
+    .steps li:last-child{border-bottom:none}
+    .step-number{
+      min-width:21px;
+      padding-top:1px;
+      flex-shrink:0;
+      color:var(--red);
+      font-weight:800;
     }
-
-    .gift-tagline strong {
-      color: #c41e3a;
+    .cta{
+      position:relative;
+      display:block;
+      overflow:hidden;
+      padding:17px;
+      border-radius:50px;
+      background:linear-gradient(180deg,#b83249,var(--red-dark));
+      box-shadow:0 7px 20px rgba(151,31,52,.25);
+      color:#fff;
+      text-align:center;
+      text-decoration:none;
+      text-transform:uppercase;
+      font-size:16px;
+      font-weight:800;
+      letter-spacing:1.8px;
+      transition:filter .15s,transform .1s;
+      cursor:pointer;
+      border:none;
+      width:100%;
     }
-
-    .cute-icons {
-      margin-top: 14px;
-      font-size: 22px;
-      letter-spacing: 6px;
+    .cta:hover{
+      filter:brightness(.94);
+      transform:translateY(-1px);
     }
-
-    .headline {
-      text-align: center;
-      margin-bottom: 8px;
+    .cta::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      left:-120%;
+      width:48%;
+      background:linear-gradient(108deg,transparent,rgba(255,255,255,.22),transparent);
+      animation:shine 3.8s ease-in-out infinite;
     }
-
-    .headline h1 {
-      font-family: 'Nunito', sans-serif;
-      font-size: 26px;
-      font-weight: 800;
-      color: #2d2d2d;
-      line-height: 1.25;
+    @keyframes shine{
+      0%,100%{left:-120%;opacity:0}
+      9%{opacity:1}
+      37%{left:140%;opacity:1}
+      45%{left:140%;opacity:0}
     }
-
-    .headline h1 span {
-      color: #c41e3a;
+    .rating{
+      padding:22px 18px 20px;
+      border:1px solid #e3e3e3;
+      border-radius:21px;
+      background:#fff;
+      box-shadow:0 12px 30px rgba(0,0,0,.07);
+      text-align:center;
     }
-
-    .headline .subhead {
-      font-size: 14px;
-      color: #ff69b4;
-      margin-top: 6px;
-      font-weight: 600;
+    .stars{
+      display:flex;
+      justify-content:center;
+      gap:6px;
+      margin-bottom:10px;
     }
-
-    .steps-box {
-      background: white;
-      border-radius: 18px;
-      padding: 24px 22px;
-      margin: 24px 0 28px;
-      box-shadow: 0 8px 28px rgba(255, 105, 180, 0.12);
-      border: 1.5px solid #ffd0e0;
+    .star{
+      display:flex;
+      width:34px;
+      height:34px;
+      align-items:center;
+      justify-content:center;
+      border-radius:5px;
+      background:var(--green);
+      color:#fff;
+      font-size:20px;
     }
-
-    .step {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      margin-bottom: 16px;
+    .score{
+      margin-bottom:3px;
+      color:#222;
+      font-size:20px;
+      font-weight:800;
     }
-
-    .step:last-child {
-      margin-bottom: 0;
+    .review-count{
+      margin-bottom:8px;
+      color:#777;
+      font-size:13px;
     }
-
-    .step-icon {
-      width: 36px;
-      height: 36px;
-      background: linear-gradient(135deg, #ffe4ec, #ffd0e0);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      flex-shrink: 0;
-      border: 1.5px solid #ffb6c1;
+    .trustpilot{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      color:#222;
+      font-size:14px;
+      font-weight:700;
     }
-
-    .step-text {
-      font-size: 14.5px;
-      line-height: 1.45;
-      color: #3a3a3a;
-      font-weight: 500;
-      padding-top: 7px;
+    .trustpilot-mark{
+      display:flex;
+      width:20px;
+      height:20px;
+      align-items:center;
+      justify-content:center;
+      border-radius:3px;
+      background:var(--green);
+      color:#fff;
+      font-size:13px;
     }
-
-    .step-text strong {
-      color: #c41e3a;
+    .faq{
+      overflow:hidden;
+      border:1px solid #e3e3e3;
+      border-radius:21px;
+      background:#fff;
+      box-shadow:0 12px 30px rgba(0,0,0,.07);
     }
-
-    .cta-wrapper {
-      text-align: center;
+    .faq-title{
+      padding:14px 20px;
+      border-bottom:1px solid #e8e8e8;
+      background:#fafafa;
+      color:var(--red);
+      font-size:10.5px;
+      font-weight:800;
+      letter-spacing:2px;
+      text-transform:uppercase;
     }
-
-    .cta-button {
-      display: inline-block;
-      background: linear-gradient(135deg, #ff69b4 0%, #ff1493 50%, #c41e3a 100%);
-      color: white;
-      font-family: 'Nunito', sans-serif;
-      font-size: 18px;
-      font-weight: 800;
-      padding: 18px 48px;
-      border-radius: 50px;
-      text-decoration: none;
-      box-shadow: 
-        0 8px 24px rgba(255, 20, 147, 0.4),
-        0 2px 0 rgba(255,255,255,0.25) inset;
-      transition: all 0.25s ease;
-      letter-spacing: 0.5px;
-      border: none;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
+    .faq-item{border-bottom:1px solid #f0f0f0}
+    .faq-item:last-child{border-bottom:none}
+    .faq-button{
+      display:flex;
+      width:100%;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:16px 20px;
+      border:0;
+      background:none;
+      color:#181818;
+      cursor:pointer;
+      text-align:left;
+      font:600 14.5px/1.3 inherit;
     }
-
-    .cta-button:hover {
-      transform: translateY(-3px) scale(1.03);
-      box-shadow: 
-        0 12px 32px rgba(255, 20, 147, 0.5),
-        0 2px 0 rgba(255,255,255,0.25) inset;
+    .faq-icon{
+      position:relative;
+      width:20px;
+      height:20px;
+      flex-shrink:0;
     }
-
-    .cta-button:active {
-      transform: translateY(0) scale(0.98);
+    .faq-icon::before,
+    .faq-icon::after{
+      content:"";
+      position:absolute;
+      border-radius:2px;
+      background:#999;
+      transition:all .2s;
     }
-
-    .cta-note {
-      margin-top: 14px;
-      font-size: 12.5px;
-      color: #888;
-      font-weight: 500;
+    .faq-icon::before{
+      top:9px;left:3.5px;
+      width:13px;height:1.5px;
     }
-
-    .cta-note span {
-      color: #ff69b4;
+    .faq-icon::after{
+      top:3.5px;left:9px;
+      width:1.5px;height:13px;
     }
-
-    .footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 11px;
-      color: #aaa;
-      line-height: 1.6;
+    .faq-item.open .faq-icon::after{
+      opacity:0;
+      transform:rotate(90deg);
     }
-
-    @media (max-width: 480px) {
-      .gift-amount {
-        font-size: 36px;
-      }
-      .headline h1 {
-        font-size: 22px;
-      }
-      .cta-button {
-        padding: 16px 36px;
-        font-size: 16px;
-      }
+    .faq-answer{
+      display:none;
+      padding:0 20px 15px;
+      color:#666;
+      font-size:13.5px;
+      line-height:1.58;
+    }
+    .faq-item.open .faq-answer{display:block}
+    .footer{
+      padding:17px 14px 4px;
+      text-align:center;
+      color:#777;
+      font-size:11.5px;
+      line-height:1.55;
+    }
+    .footer-brand{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      margin-bottom:8px;
+      color:#2a2022;
+      font-size:13px;
+      font-weight:700;
+    }
+    .footer-brand img{
+      width:27px;
+      height:27px;
+      object-fit:contain;
+    }
+    .footer p+p{margin-top:5px}
+    a:focus-visible,button:focus-visible{
+      outline:3px solid rgba(167,41,63,.35);
+      outline-offset:4px;
+    }
+    .faq-button:focus-visible{outline-offset:-4px}
+    @media(max-width:360px){
+      body{padding-left:12px;padding-right:12px}
+      .offer-card{padding-left:17px;padding-right:17px}
+      .brand-logo{width:98px;height:98px}
+      .steps li{padding-left:13px;padding-right:13px;gap:10px}
+      .star{width:32px;height:32px}
     }
   </style>
 </head>
 <body>
+  <main class="page">
 
-  <!-- Floating sparkles -->
-  <div class="sparkle" style="top: 12%; left: 8%;">✨</div>
-  <div class="sparkle" style="top: 25%; right: 10%; animation-delay: 1.5s;">⭐</div>
-  <div class="sparkle" style="top: 55%; left: 5%; animation-delay: 3s;">✨</div>
-  <div class="sparkle" style="top: 70%; right: 8%; animation-delay: 2s;">⭐</div>
-  <div class="sparkle" style="top: 40%; right: 6%; animation-delay: 4s;">♡</div>
-
-  <div class="container">
-
-    <div class="logo-area">
-      <div class="collab-badge">
-        <span style="font-size: 20px;">👑</span>
-        <div class="collab-text">BURGER KING <span>×</span> HELLO KITTY</div>
-        <span style="font-size: 20px;">🎀</span>
-      </div>
+    <!-- Online counter -->
+    <div class="online">
+      <span class="online-dot"></span>
+      <span id="online-count">816</span> online now
     </div>
 
-    <div class="gift-card">
-      <div class="gift-label">Limited Edition Reward</div>
-      <div class="gift-amount">$100 Gift Card</div>
-      <div class="gift-tagline">
-        Celebrate the <strong>Burger King × Hello Kitty</strong> collab<br>
-        with exclusive King Jr. Meals, mystery toys<br>
-        & a special golden Hello Kitty surprise!
+    <!-- Main offer card -->
+    <section class="offer-card">
+      <div class="brand">
+        <img class="brand-logo" src="https://7breward.com/assets/7brew-logo.png" alt="7 Brew">
+        <p class="brand-copy">
+          Complete the steps below to claim your<br>
+          <strong>$500 in 7 Brew savings</strong>
+        </p>
       </div>
-      <div class="cute-icons">🐱 👑 🍔 🎀 ✨</div>
-    </div>
 
-    <div class="headline">
-      <h1>Unlock <span>BK × Hello Kitty</span> Rewards 🎁</h1>
-      <div class="subhead">✨ Here’s how to claim your $100 gift card ✨</div>
-    </div>
+      <div class="steps-box">
+        <div class="steps-title">Steps to Qualify</div>
+        <ul class="steps">
+          <li>
+            <span class="step-number">1.</span>
+            <span>Click on “Claim Now”</span>
+          </li>
+          <li>
+            <span class="step-number">2.</span>
+            <span>Enter your email and basic information</span>
+          </li>
+          <li>
+            <span class="step-number">3.</span>
+            <span>Complete 4–5 sponsored deals (required)</span>
+          </li>
+          <li>
+            <span class="step-number">4.</span>
+            <span>Claim your $500 in 7 Brew savings</span>
+          </li>
+        </ul>
+      </div>
 
-    <div class="steps-box">
-      <div class="step">
-        <div class="step-icon">📋</div>
-        <div class="step-text">Click the <strong>“Claim Now”</strong> button below</div>
-      </div>
-      <div class="step">
-        <div class="step-icon">✉️</div>
-        <div class="step-text">Enter your email and basic details</div>
-      </div>
-      <div class="step">
-        <div class="step-icon">📝</div>
-        <div class="step-text">Answer our quick fan experience survey</div>
-      </div>
-      <div class="step">
-        <div class="step-icon">🎁</div>
-        <div class="step-text">Complete 4–5 featured partner offers</div>
-      </div>
-      <div class="step">
-        <div class="step-icon">🔓</div>
-        <div class="step-text">Unlock your <strong>$100 Burger King Gift Card</strong></div>
-      </div>
-    </div>
+      <!-- CTA – link never shows on hover -->
+      <button class="cta" id="claimBtn" type="button">CLAIM NOW</button>
+    </section>
 
-    <div class="cta-wrapper">
-      <a href="https://linkthem.net/aff_c?offer_id=3710&aff_id=145283" class="cta-button" target="_blank" rel="noopener noreferrer">
-        ⭐ CLAIM NOW ⭐
-      </a>
-      <div class="cta-note">
-        (Instant approval • <span>No purchase required</span>)
+    <!-- Trustpilot rating -->
+    <section class="rating">
+      <div class="stars" aria-hidden="true">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
       </div>
-    </div>
+      <div class="score">4.9 out of 5</div>
+      <div class="review-count">Based on 2,369 reviews</div>
+      <div class="trustpilot">
+        <span class="trustpilot-mark" aria-hidden="true">★</span>
+        Trustpilot
+      </div>
+    </section>
 
-    <div class="footer">
-      This is a limited-time promotional offer related to the<br>
-      Burger King × Hello Kitty &amp; Friends collaboration.<br>
-      Offer available while supplies last. Terms may apply.
-    </div>
+    <!-- FAQ -->
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="faq-title" id="faq-heading">Frequently Asked Questions</h2>
 
-  </div>
+      <div class="faq-item">
+        <button class="faq-button" type="button" aria-expanded="false">
+          Who is this offer for?
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer">
+          Eligibility depends on the promotion partner’s current requirements. Review the terms shown on the next page before participating.
+        </div>
+      </div>
 
+      <div class="faq-item">
+        <button class="faq-button" type="button" aria-expanded="false">
+          How much can I save?
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer">
+          Eligible participants may qualify for $500 in 7 Brew savings after completing the stated requirements.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-button" type="button" aria-expanded="false">
+          What are sponsored deals?
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer">
+          Sponsored deals are third-party offers that may include trials, subscriptions, purchases, or app activities. Each deal shows its own terms and any cost before you choose it.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-button" type="button" aria-expanded="false">
+          How many deals do I need to complete?
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer">
+          The promotion typically requires completing 4–5 qualifying deals. The exact rules appear on the partner’s eligibility page.
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-brand">
+        <img src="https://7breward.com/assets/7brew-logo.png" alt="">
+        <span>7B Reward</span>
+      </div>
+      <p>© 2026 7B Reward. All rights reserved.</p>
+      <p>Offer availability and eligibility are subject to the promotion partner’s requirements and terms. Review all details before participating.</p>
+    </footer>
+  </main>
+
+  <script>
+    // Online counter that fluctuates
+    (function updateOnlineCount(){
+      var counter = document.getElementById('online-count');
+      var current = Number(counter.textContent) || 816;
+      var change = Math.floor(Math.random() * 7) - 3;
+      counter.textContent = Math.min(893, Math.max(776, current + change));
+      window.setTimeout(updateOnlineCount, 3600 + Math.random() * 5400);
+    }());
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(function(item){
+      var button = item.querySelector('.faq-button');
+      button.addEventListener('click', function(){
+        var expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', String(!expanded));
+        item.classList.toggle('open', !expanded);
+      });
+    });
+
+    // CTA – redirects without ever showing the real URL on hover
+    document.getElementById('claimBtn').addEventListener('click', function(){
+      window.location.href = 'https://giftclick.org/aff_c?offer_id=4512&aff_id=145283';
+    });
+  </script>
 </body>
 </html>

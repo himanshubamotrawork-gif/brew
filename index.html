@@ -49,32 +49,6 @@
       50% { transform: translateY(-12px) rotate(8deg); }
     }
 
-    .top-banner {
-      background: linear-gradient(90deg, #c41e3a, #e63950, #c41e3a);
-      color: white;
-      text-align: center;
-      padding: 12px 16px;
-      font-size: 14px;
-      font-weight: 600;
-      position: relative;
-      z-index: 10;
-      box-shadow: 0 2px 12px rgba(196, 30, 58, 0.3);
-    }
-
-    .top-banner .timer {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .top-banner .sub {
-      font-size: 11px;
-      letter-spacing: 1.5px;
-      opacity: 0.9;
-      margin-top: 2px;
-      text-transform: uppercase;
-    }
-
     .container {
       max-width: 520px;
       margin: 0 auto;
@@ -310,27 +284,20 @@
 </head>
 <body>
 
-  <div class="sparkle" style="top: 120px; left: 8%;">✨</div>
-  <div class="sparkle" style="top: 280px; right: 6%; animation-delay: 1.5s;">♡</div>
-  <div class="sparkle" style="top: 480px; left: 5%; animation-delay: 3s;">⭐</div>
-  <div class="sparkle" style="top: 650px; right: 10%; animation-delay: 2s;">✨</div>
-
-  <div class="top-banner">
-    <div class="timer">
-      🕐 You have <span id="countdown">4:59</span> minutes left to unlock your reward
-    </div>
-    <div class="sub">— Complete the steps before access expires —</div>
-  </div>
+  <!-- Floating sparkles -->
+  <div class="sparkle" style="top: 12%; left: 8%;">✨</div>
+  <div class="sparkle" style="top: 25%; right: 10%; animation-delay: 1.5s;">⭐</div>
+  <div class="sparkle" style="top: 55%; left: 5%; animation-delay: 3s;">✨</div>
+  <div class="sparkle" style="top: 70%; right: 8%; animation-delay: 2s;">⭐</div>
+  <div class="sparkle" style="top: 40%; right: 6%; animation-delay: 4s;">♡</div>
 
   <div class="container">
 
     <div class="logo-area">
       <div class="collab-badge">
-        <span style="font-size: 28px;">👑</span>
-        <div class="collab-text">
-          BURGER KING <span>× HELLO KITTY</span>
-        </div>
-        <span style="font-size: 28px;">🎀</span>
+        <span style="font-size: 20px;">👑</span>
+        <div class="collab-text">BURGER KING <span>×</span> HELLO KITTY</div>
+        <span style="font-size: 20px;">🎀</span>
       </div>
     </div>
 
@@ -384,30 +351,11 @@
 
     <div class="footer">
       This is a limited-time promotional offer related to the<br>
-      Burger King × Hello Kitty & Friends collaboration.<br>
+      Burger King × Hello Kitty &amp; Friends collaboration.<br>
       Offer available while supplies last. Terms may apply.
     </div>
 
   </div>
 
-  <script>
-    let totalSeconds = 4 * 60 + 59;
-
-    function updateCountdown() {
-      const minutes = Math.floor(totalSeconds / 60);
-      const seconds = totalSeconds % 60;
-      document.getElementById('countdown').textContent = 
-        `${minutes}:${seconds.toString().padStart(2, '0')}`;
-      
-      if (totalSeconds > 0) {
-        totalSeconds--;
-      } else {
-        totalSeconds = 0;
-      }
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  </script>
 </body>
 </html>
